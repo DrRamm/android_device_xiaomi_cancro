@@ -118,6 +118,13 @@ void vendor_load_properties()
         case 1974:
             property_set("ro.product.model", "MI 4");
             break;
+	case 1973:
+            property_set("ro.product.model", "MI 4CDMA");
+            break;
+        case 1972:
+            property_set("ro.product.model", "MI 4LTE");
+            property_set("ro.product.name", "cancro_wc_lte");
+            break;
         default:
             // Other unsupported variants
             property_set("ro.product.model", "Unsupported MI Cancro");
