@@ -54,9 +54,12 @@ on boot
     write /sys/devices/system/cpu/cpu3/online 1
 
     # msm_thermal
-    write /sys/kernel/msm_thermal/zone0 "1728000 45 43"
-    write /sys/kernel/msm_thermal/zone1 "1574400 50 47"
-    write /sys/kernel/msm_thermal/zone2 "1267200 55 53"
+    write /sys/kernel/msm_thermal/zone0 "1728000 45 10"
+    write /sys/kernel/msm_thermal/zone1 "1574400 50 46"
+    write /sys/kernel/msm_thermal/zone2 "1497600 55 51"
+    write /sys/kernel/msm_thermal/zone3 "1190400 60 56"
+    write /sys/kernel/msm_thermal/zone4 "960000  70 61"
+    write /sys/kernel/msm_thermal/zone5 "729600  85 71"
     write /sys/kernel/msm_thermal/enabled 1
 
     # msm_thermal (for power HAL usage)
@@ -227,14 +230,14 @@ on boot
 
 on enable-low-power
     write /sys/kernel/msm_thermal/enabled 0
-    write /sys/kernel/msm_thermal/zone0 "1728000 39 38"
-    write /sys/kernel/msm_thermal/zone1 "1574400 42 40"
-    write /sys/kernel/msm_thermal/zone2 "1497600 45 43"
-    write /sys/kernel/msm_thermal/zone3 "1267200 49 46"
-    write /sys/kernel/msm_thermal/zone4 "1190400 53 50"
-    write /sys/kernel/msm_thermal/zone5 "1036800 56 54"
-    write /sys/kernel/msm_thermal/zone6 "960000 62 60"
-    write /sys/kernel/msm_thermal/zone7 "729600 79 75"
+    write /sys/kernel/msm_thermal/zone0 "1728000 45 5"
+    write /sys/kernel/msm_thermal/zone1 "1497600 50 46"
+    write /sys/kernel/msm_thermal/zone2 "1267200 55 51"
+    write /sys/kernel/msm_thermal/zone3 "1036800 60 56"
+    write /sys/kernel/msm_thermal/zone4 "883200  65 61"
+    write /sys/kernel/msm_thermal/zone5 "729600  70 66"
+    write /sys/kernel/msm_thermal/zone6 "652800  75 71"
+    write /sys/kernel/msm_thermal/zone7 "422400  99 76"
     write /sys/kernel/msm_thermal/sampling_ms 8000
     write /sys/kernel/msm_thermal/enabled 1
 
