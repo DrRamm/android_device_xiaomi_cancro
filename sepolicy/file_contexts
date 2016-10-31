@@ -6,6 +6,9 @@
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
 /sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0
 
+# Bluetooth
+/system/bin/bdaddr_xiaomi                                    u:object_r:bdaddr_exec:s0
+
 #============= cmhw ==============
 /sys/vibrator/pwmvalue                                           u:object_r:vibeamp_sysfs:s0
 /sys/bus/i2c/drivers/atmel_mxt_ts/2-004a/keys_off            	 u:object_r:display_sysfs:s0
