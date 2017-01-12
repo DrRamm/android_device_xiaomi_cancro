@@ -83,6 +83,12 @@ case "$target" in
                 echo 1728000 > /sys/module/cpu_boost/parameters/sync_threshold
                 echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
                 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
+		# some tuning
+		echo 'Y' > /sys/module/workqueue/parameters/power_efficient
+		echo '1' > /sys/kernel/fast_charge/force_fast_charge
+		echo '260' > /sys/devices/platform/kcal_ctrl.0/kcal_sat
+		echo 'Y' > /sys/module/adreno_idler/parameters/adreno_idler_active
+                setprop ro.qualcomm.perf.cores_online 1
             ;;
             *)
                 echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -169,7 +175,7 @@ esac
 # Post-setup services
 case "$target" in
     "msm8974")
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
+        echo 896 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
 esac
 
