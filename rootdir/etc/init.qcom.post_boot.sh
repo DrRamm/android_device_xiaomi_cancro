@@ -122,6 +122,8 @@ case "$target" in
         chmod -h 664 /sys/devices/system/cpu/sched_mc_power_savings
         chown system.system /sys/class/devfreq/qcom,cpubw*/governor
         chmod -h 664 /sys/class/devfreq/qcom,cpubw*/governor
+        chown system.system /sys/module/workqueue/parameters/power_efficient
+ 	chmod -h 644 /sys/module/workqueue/parameters/power_efficient
         chown system.system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown system.system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown system.system /sys/devices/system/cpu/cpu0/cpufreq/sys_cap_freq
