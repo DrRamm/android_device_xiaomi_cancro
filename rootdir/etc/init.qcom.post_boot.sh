@@ -140,10 +140,6 @@ case "$target" in
         chown system.system /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         chown system.system /sys/devices/system/cpu/cpu3/cpufreq/sys_cap_freq
         chown system.system /sys/devices/system/cpu/cpu3/cpufreq/thermal_cap_freq
-        echo 2457600 > /sys/devices/system/cpu/cpu0/cpufreq/sys_cap_freq
-        echo 2457600 > /sys/devices/system/cpu/cpu1/cpufreq/sys_cap_freq
-        echo 2457600 > /sys/devices/system/cpu/cpu2/cpufreq/sys_cap_freq
-        echo 2457600 > /sys/devices/system/cpu/cpu3/cpufreq/sys_cap_freq
         echo 2 > /sys/devices/system/cpu/sched_mc_power_savings
         chown system.system /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
         chown system.system /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
