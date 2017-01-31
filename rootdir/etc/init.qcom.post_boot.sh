@@ -72,19 +72,19 @@ case "$target" in
                 echo "interactive" > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
                 echo "interactive" > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
                 echo "interactive" > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-                echo "19000 1400000:39000 1700000:19000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
-                echo 99 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
+                echo "19000 1400000:35000 1800000:19000" > /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay
+                echo 95 > /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load
                 echo 1497600 > /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
                 echo 1497600 > /sys/devices/system/cpu/cpufreq/interactive/input_boost_freq
                 echo 1 > /sys/devices/system/cpu/cpufreq/interactive/io_is_busy
-                echo "85 1500000:90 1800000:70" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
-                echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+                echo "50 1300000:60 1500000:70 1800000:80 2000000:90" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+                echo 30000 > /sys/devices/system/cpu/cpufreq/interactive/min_sample_time
+		echo 40000 > /sys/devices/system/cpu/cpufreq/interactive/timer_rate
                 echo 20 > /sys/module/cpu_boost/parameters/boost_ms
                 echo 1728000 > /sys/module/cpu_boost/parameters/sync_threshold
-                echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
+                echo 99000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
                 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 		# some tuning
-		echo 'Y' > /sys/module/workqueue/parameters/power_efficient
 		echo '1' > /sys/kernel/fast_charge/force_fast_charge
 		echo '260' > /sys/devices/platform/kcal_ctrl.0/kcal_sat
 		echo 'Y' > /sys/module/adreno_idler/parameters/adreno_idler_active
