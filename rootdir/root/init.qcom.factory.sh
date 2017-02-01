@@ -143,11 +143,6 @@
     echo 5 > /proc/sys/vm/dirty_background_ratio
 
     # Permissions for System Server and daemons.
-    chown -h radio.system /sys/android_power/state
-    chown -h radio.system /sys/android_power/request_state
-    chown -h radio.system /sys/android_power/acquire_full_wake_lock
-    chown -h radio.system /sys/android_power/acquire_partial_wake_lock
-    chown -h radio.system /sys/android_power/release_wake_lock
     chown -h system.system /sys/power/autosleep
     chown -h system.system /sys/power/state
     chown -h system.system /sys/power/wakeup_count
