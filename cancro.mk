@@ -57,10 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.cancro
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/changepowermode.sh:system/bin/changepowermode.sh
+    power.msm8974
 
 # WiFi
 PRODUCT_COPY_FILES += \
