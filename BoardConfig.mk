@@ -63,8 +63,9 @@ TARGET_LIBINIT_DEFINES_FILE := $(CANCRO_PATH)/init/init_cancro.cpp
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE            := true
-TARGET_POWERHAL_VARIANT             := qcom
-TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(CANCRO_PATH)/power/power_ext.c
+
+#Local Qcom variant
+TARGET_POWERHAL_VARIANT 	    := cancro
 
 # Audio
 BOARD_USES_ALSA_AUDIO                      := true
