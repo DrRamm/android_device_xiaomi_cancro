@@ -1,2 +1,3 @@
 #============= device ==============
 allow device labeledfs:filesystem associate;
+type nvbackup_block_device, dev_type;
