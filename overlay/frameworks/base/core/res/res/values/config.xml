@@ -324,4 +324,9 @@
     <!-- Disable wakeup during Netwoek Sampling -->
     <bool name="config_networkSamplingWakesDevice">false</bool>
 
+    <!-- Night display  -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+
+    <!-- Operating volatage for bluetooth controller. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
 </resources>
