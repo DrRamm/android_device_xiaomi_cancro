@@ -150,9 +150,6 @@ BOARD_HARDWARE_CLASS += \
     hardware/cyanogen/cmhw \
     $(CANCRO_PATH)/cmhw
 
-# No old RPC for prop
-TARGET_NO_RPC := true
-
 # GPS HAL lives here
 TARGET_GPS_HAL_PATH         := $(CANCRO_PATH)/gps
 TARGET_PROVIDES_GPS_LOC_API := true
