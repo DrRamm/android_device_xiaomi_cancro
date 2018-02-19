@@ -42,7 +42,7 @@ TARGET_CPU_SMP      := true
 TARGET_CPU_VARIANT  := krait
 
 # Extended filesystem support
-TARGET_EXFAT_DRIVER := exfat
+TARGET_EXFAT_DRIVER := sdfat
 
 # Flags
 BOARD_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64 -DUSE_RIL_VERSION_10
