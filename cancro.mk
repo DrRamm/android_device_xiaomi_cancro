@@ -41,6 +41,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libshim_dso_handle \
     camera.msm8974 \
     libxml2 \
     Snap
