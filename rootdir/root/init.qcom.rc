@@ -473,6 +473,7 @@ service bdaddr /system/bin/bdaddr_xiaomi
     user root
     group system
     oneshot
+    seclabel u:r:bdaddr:s0
 
 service rmt_storage /system/bin/rmt_storage
     class core
