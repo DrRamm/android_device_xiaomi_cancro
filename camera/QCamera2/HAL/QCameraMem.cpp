@@ -1087,7 +1087,6 @@ native_handle_t *QCameraVideoMemory::updateNativeHandle(uint32_t index, bool met
 int QCameraVideoMemory::closeNativeHandle(const void *data, bool metadata)
 {
     int32_t rc = NO_ERROR;
-    int32_t index = -1;
 
 #ifdef USE_MEDIA_EXTENSIONS
     camera_memory_t *video_mem = NULL;
