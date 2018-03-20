@@ -2865,7 +2865,7 @@ int32_t QCameraParameters::setMCEValue(const QCameraParameters& params)
  *              NO_ERROR  -- success
  *              none-zero failure code
  *==========================================================================*/
-int32_t QCameraParameters::setDISValue(const QCameraParameters& /*params*/)
+int32_t QCameraParameters::setDISValue(const QCameraParameters& params)
 {
     const char *str = params.get(KEY_QC_DIS);
     const char *prev_str = get(KEY_QC_DIS);
