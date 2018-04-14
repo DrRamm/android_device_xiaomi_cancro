@@ -86,7 +86,7 @@ AUDIO_FEATURE_ENABLED_HWDEP_CAL            := true
 AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE      := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY          := true
 # Seems good
-USE_CUSTOM_AUDIO_POLICY                    := 1
+#USE_CUSTOM_AUDIO_POLICY                    := 1
 USE_XML_AUDIO_POLICY_CONF 		   := 1
 
 # FM Radio
@@ -115,6 +115,8 @@ TARGET_USE_COMPAT_GRALLOC_PERFORM := true
 TARGET_USES_ION                   := true
 OVERRIDE_RS_DRIVER                := libRSDriver_adreno.so
 NUM_FRAMEBUFFER_SURFACE_BUFFERS   := 3
+TARGET_USES_GRALLOC1              := true
+TARGET_USES_HWC2                  := true
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
