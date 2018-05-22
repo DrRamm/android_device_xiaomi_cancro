@@ -60,6 +60,7 @@ BOARD_GLOBAL_CFLAGS   += -D__ARM_USE_PLD -D__ARM_CACHE_LINE_SIZE=64
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Kernel
+BOARD_KERNEL_SEPARATED_DT          := true
 BOARD_KERNEL_CMDLINE               := console=none vmalloc=340M androidboot.hardware=qcom msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
 LZMA_RAMDISK_TARGETS               := boot,recovery
 BOARD_KERNEL_SEPARATED_DT          := true
@@ -72,6 +73,7 @@ TARGET_KERNEL_ARCH                 := arm
 TARGET_KERNEL_CONFIG               := virgo_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 BOARD_DTBTOOL_ARGS                 := -2
+BOARD_CUSTOM_BOOTIMG_MK            := $(DEVICE_PATH)/mkbootimg.mk
 
 # Vendor Init
 TARGET_INIT_VENDOR_LIB      := libinit_cancro
@@ -84,7 +86,6 @@ TARGET_POWERHAL_SET_INTERACTIVE_EXT := $(DEVICE_PATH)/power/power_ext.c
 
 # Audio
 BOARD_USES_ALSA_AUDIO                      := true
-USE_CUSTOM_AUDIO_POLICY                    := 1
 TARGET_USES_QCOM_MM_AUDIO                  := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP        := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS         := true
