@@ -18,6 +18,12 @@ BOARD_VENDOR := xiaomi
 
 DEVICE_PATH := device/xiaomi/cancro
 
+# Allow Missing Dependencies
+ALLOW_MISSING_DEPENDENCIES=true
+
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # ReleaseTools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_cancro
@@ -104,6 +110,8 @@ QCOM_BT_USE_SMD_TTY                         := true
 BLUETOOTH_HCI_USE_MCT                       := true
 
 # Boot animation
+TARGET_BOOT_ANIMATION_RES     := 1080
+TARGET_INCLUDE_ARCORE         := true
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Radio
@@ -111,6 +119,7 @@ TARGET_RIL_VARIANT                := caf
 FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
 
 # Graphics
+TARGET_DENSITY                    := xxhdpi
 USE_OPENGL_RENDERER               := true
 TARGET_CONTINUOUS_SPLASH_ENABLED  := true
 TARGET_USES_C2D_COMPOSITION       := true
