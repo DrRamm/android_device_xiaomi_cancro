@@ -140,7 +140,7 @@ void vendor_load_properties()
             property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4");
             break;
         case 1973:
-            property_override_dual("ro.product.model", "MI 4CDMA");
+            property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4CDMA");
             break;
         case 1972:
             property_override_dual("ro.product.model", "ro.vendor.product.model", "MI 4LTE");
